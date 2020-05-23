@@ -5,8 +5,8 @@ set nocompatible
 set cursorline
 
 " vsplit line type
-highlight VertSplit ctermbg=100 ctermfg=100
-set fillchars=vert:\|
+" highlight VertSplit ctermbg=0 ctermfg=255
+set fillchars=vert:\  
 
 if has('syntax')
 	syntax on
@@ -15,6 +15,9 @@ endif
 " line number
 set nu 
 set relativenumber
+
+" line display
+set nowrap
 
 " status line
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V,%L%)\ %P
@@ -27,7 +30,7 @@ set softtabstop=8
 set shiftwidth=8
 set noexpandtab
 " background color
-set background=light
+" set background=light
 
 " display completion matches in a status line
 set wildmenu
@@ -159,7 +162,7 @@ Plug 'wesleyche/SrcExpl'
 " Plug 'vim-scripts/taglist.vim'
 
 " displays tags in a window, ordered by scope
-Plug 'majutsushi/tagbar'
+" Plug 'majutsushi/tagbar'
 
 " for intensely orgasmic commenting
 Plug 'scrooloose/nerdcommenter'
@@ -176,6 +179,9 @@ Plug 'scrooloose/nerdcommenter'
 " code completion engine for vim
 " you have to install it manually in it's directory
 " Plug 'ycm-core/YouCompleteMe'
+
+" full path fuzzy file, buffer, tag, ... finder for vim
+Plug 'kien/ctrlp.vim'
 
 " Initialize plugin system
 call plug#end()
@@ -215,5 +221,30 @@ nmap <F7> :TagbarToggle<CR>
 "---------------------------------------------------------"
 " set nerd tree
 "---------------------------------------------------------"
-let NERDTreeWinPos = "left"
 nmap <F9> :NERDTreeToggle<CR>
+let NERDTreeMinimalUI = 1
+let NERDTreeWinPos = "right"
+let NERDTreeWinSize = 30
+" auto open/close nerdtree window
+" autocmd winleave * if (winnr("$") == 2 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | qa | endif
+" auto winleave * echo winnr('$')
+" autocmd vimenter * NERDTree
+" This is ONLY done in response to tree navigation mappings,
+" i.e. NERDTree-C-J<K>, NERDTree-p<P>
+let NERDTreeAutoCenter = 1
+let NERDTreeAutoCenterThreshold = 3
+" set natural sort order
+" let NERDTreeNaturalSort = 1
+let NERDTreeIgnore = []
+let NERDTreeMouseMode = 1
+" Whether the NERDTree window closes or bookmark table
+" after opening a file. 0 --> No change
+let NERDTreeQuitOnOpen = 0
+" This setting is set to 1 then the bookmarks table will be displayed
+" It also can be toggled by NERDTree-B
+let NERDTreeShowBookmarks = 1
+" This setting tells vim whether to display hidden files. [NERDTree-I]
+let NERDTreeShowHidden = 0
+"---------------------------------------------------------"
+" end nerd tree
+"---------------------------------------------------------"
