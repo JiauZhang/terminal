@@ -87,8 +87,12 @@ map <S-k> :res +4<CR>
 map <S-l> :vertical resize+4<CR>
 map <S-h> :vertical resize-4<CR>
 
-" rotate window
-" map <A-H> :res +4<CR>
+" move window
+map mj <c-w>J
+map mk <c-w>K
+map ml <c-w>L
+map mh <c-w>H
+map mt <c-w>T
 
 "---------------------------------------------------------"
 " ctags database path
@@ -219,15 +223,15 @@ let g:SrcExpl_isUpdateTags = 0
 nmap <F7> :TagbarToggle<CR>
 
 "---------------------------------------------------------"
-" set nerd tree
+" config nerdtree
 "---------------------------------------------------------"
 nmap <F9> :NERDTreeToggle<CR>
 let NERDTreeMinimalUI = 1
-let NERDTreeWinPos = "right"
-let NERDTreeWinSize = 30
-" auto open/close nerdtree window
-" autocmd winleave * if (winnr("$") == 2 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | qa | endif
-" auto winleave * echo winnr('$')
+let NERDTreeWinPos = "left"
+" This param is only loaded once when vim starts
+" so if you want change it, start vim again
+let NERDTreeWinSize = 25
+" auto open nerdtree window
 " autocmd vimenter * NERDTree
 " This is ONLY done in response to tree navigation mappings,
 " i.e. NERDTree-C-J<K>, NERDTree-p<P>
@@ -246,5 +250,31 @@ let NERDTreeShowBookmarks = 1
 " This setting tells vim whether to display hidden files. [NERDTree-I]
 let NERDTreeShowHidden = 0
 "---------------------------------------------------------"
-" end nerd tree
+" end nerdtree configuration
+"---------------------------------------------------------"
+
+"---------------------------------------------------------"
+" config ctrlp
+"---------------------------------------------------------"
+" This option to change the mapping to invoke CtrlP in Normal mode
+let g:ctrlp_map = '<c-p>'
+" Set this to 1 to set searching by filename (as opposed to full path)
+let g:ctrlp_by_filename = 1
+" Change the postion, the listing order of results
+" the minimum and the maximum heights of the match window
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'
+" CtrlP sets its local working directory
+" let g:ctrlp_working_path_mode = 'ra'
+" Set the directory to store the cache files: >
+" let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
+"---------------------------------------------------------"
+" end ctrlp configuration
+"---------------------------------------------------------"
+
+"---------------------------------------------------------"
+" config nerdcommenter
+"---------------------------------------------------------"
+" let mapleader = ","
+"---------------------------------------------------------"
+" end nerdcommenter configuration
 "---------------------------------------------------------"
