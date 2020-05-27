@@ -122,13 +122,12 @@ endif
 
 
 "---------------------------------------------------------"
-" auto install vim- plug
+" auto install vim-plug
 "---------------------------------------------------------"
-if empty(glob('~/.vim/autoload/plug.vim'))
-	!curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-		\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-endif
-
+" if empty(glob('~/.vim/autoload/plug.vim'))
+" 	!curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+" 		\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+" endif
 
 "---------------------------------------------------------"
 " set vim-plugin
@@ -166,23 +165,10 @@ Plug 'wesleyche/SrcExpl'
 " Plug 'vim-scripts/taglist.vim'
 
 " displays tags in a window, ordered by scope
-" Plug 'majutsushi/tagbar'
+Plug 'majutsushi/tagbar'
 
 " for intensely orgasmic commenting
 Plug 'scrooloose/nerdcommenter'
-
-" draw a nice statusline at the bottom of each window
-" Plug 'vim-airline/vim-airline'
-
-" vim-airline theme
-" Plug 'vim-airline/vim-airline-themes'
-
-" color theme
-" Plug 'NLKNguyen/papercolor-theme'
-
-" code completion engine for vim
-" you have to install it manually in it's directory
-" Plug 'ycm-core/YouCompleteMe'
 
 " full path fuzzy file, buffer, tag, ... finder for vim
 Plug 'kien/ctrlp.vim'
@@ -191,11 +177,6 @@ Plug 'kien/ctrlp.vim'
 call plug#end()
 "---------------------------------------------------------"
 " end plugin
-"---------------------------------------------------------"
-
-
-"---------------------------------------------------------"
-" set vim-airline
 "---------------------------------------------------------"
 
 "---------------------------------------------------------"

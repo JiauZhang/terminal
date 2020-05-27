@@ -1,0 +1,17 @@
+"---------------------------------------------------------"
+" Dropped vim plugin
+"---------------------------------------------------------"
+" draw a nice statusline at the bottom of each window
+" Plug 'vim-airline/vim-airline'
+
+" vim-airline theme
+" Plug 'vim-airline/vim-airline-themes'
+
+" color theme
+" Plug 'NLKNguyen/papercolor-theme'
+
+" code completion engine for vim
+" you have to install it manually in it's directory
+" Plug 'ycm-core/YouCompleteMe'
+
+
