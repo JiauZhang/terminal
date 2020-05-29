@@ -38,7 +38,7 @@ set wildmenu
 " while typing a search comman, show where patter
 " as it was typed so far, matches
 " set incsearch
-
+set ignorecase
  
 " enable mouse
 if has('mouse')
@@ -78,10 +78,6 @@ map <C-K> <C-W>k
 map <C-L> <C-W>l
 
 " resize window
-" map <up> :res +4<CR>
-" map <down> :res -4<CR>
-" map <left> :vertical resize+4<CR>
-" map <right> :vertical resize-4<CR>
 map <S-j> :res -4<CR>
 map <S-k> :res +4<CR>
 map <S-l> :vertical resize+4<CR>
@@ -259,3 +255,13 @@ let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'
 "---------------------------------------------------------"
 " end nerdcommenter configuration
 "---------------------------------------------------------"
+
+" function
+function! Foo()
+	let x = 0
+	function! Bar() closure
+		let x += 1
+		return x
+	endfunction
+	return funcref('Bar')
+endfunction
