@@ -56,7 +56,7 @@ map S :w<CR>
 map s <nop>
 map R :source $MYVIMRC<CR>
 map Q :q<CR>
-imap <C-N> <Esc>
+imap <C-N>  <Esc>
 
 " split window
 map sl :set splitright<CR>:vnew<CR>
@@ -89,6 +89,13 @@ map mk <c-w>K
 map ml <c-w>L
 map mh <c-w>H
 map mt <c-w>T
+
+" terminal window
+" :term bash --> toggle terminal
+if has('terminal')
+	map tt :term bash<CR>
+	tnoremap <ESC> <C-W>N
+endif
 
 "---------------------------------------------------------"
 " ctags database path
