@@ -35,9 +35,9 @@ set noexpandtab
 " display completion matches in a status line
 set wildmenu
 
-" while typing a search comman, show where patter
-" as it was typed so far, matches
+" while typing a search comman, show where pattern as it was typed so far, matches
 " set incsearch
+set nohlsearch
 set ignorecase
  
 " enable mouse
@@ -105,9 +105,6 @@ endif
 "---------------------------------------------------------"
 " cscope database path
 "---------------------------------------------------------"
-set csto=0
-set cst
-set nocsverb
 if has("cscope")
 	set csprg=/usr/bin/cscope
 	set csto=0
