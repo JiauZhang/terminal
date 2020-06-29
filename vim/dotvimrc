@@ -31,6 +31,8 @@ set shiftwidth=8
 set noexpandtab
 " background color
 " set background=light
+" vim theme
+colorscheme industry
 
 " display completion matches in a status line
 set wildmenu
