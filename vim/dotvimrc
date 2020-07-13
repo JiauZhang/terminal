@@ -54,11 +54,11 @@ endif
 " set key map
 "---------------------------------------------------------"
 " keyboard remap
-map S :w<CR>
+nmap S :w<CR>
 map s <nop>
 map R :source $MYVIMRC<CR>
 map Q :q<CR>
-imap <C-N>  <Esc>
+imap <C-i>  <Esc>
 
 " split window
 map sl :set splitright<CR>:vnew<CR>
