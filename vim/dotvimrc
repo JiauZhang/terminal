@@ -58,7 +58,7 @@ nmap S :w<CR>
 map s <nop>
 map R :source $MYVIMRC<CR>
 map Q :q<CR>
-imap <C-i>  <Esc>
+noremap <C-i>  <Esc>
 
 " split window
 map sl :set splitright<CR>:vnew<CR>
@@ -70,8 +70,8 @@ map sk :set nosplitbelow<CR>:new<CR>
 map tp :tabnew<CR>
 map tl :tabnext<CR>
 map th :tabprevious<CR>
-map <tab> :tabnext<CR>
-map <S-tab> :tabprevious<CR>
+nmap <tab> :tabnext<CR>
+nmap <S-tab> :tabprevious<CR>
 
 " toggle cursor between windows 
 map <C-H> <C-W>h
